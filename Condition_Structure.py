@@ -22,7 +22,7 @@ if 999<8888:
         print("<<")
 #Different Orientation of if else
 is_odd=["YES" if 2%2==0 else "NO"]
-print(is_odd.pop())
+print(is_odd[0])
 print("========MatchCase========")
 #simple Match Case:
 match (66-9):
