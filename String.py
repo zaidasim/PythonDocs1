@@ -8,7 +8,7 @@ print(String)
 String=String.strip()#remove wide space i.e more that one space from word/String
 print(String)
 
-splitstring=String.split()# Makes a list of all the words in the string
+splitstring=String.split()# makings a list of all the words in the string
 print(splitstring)
 findindex=String.find("Is")#lowest index that has the substring occurences
 print(findindex)
