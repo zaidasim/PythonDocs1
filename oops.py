@@ -1,25 +1,31 @@
 def scope_test():
-    def do_local():
+    def local():
         variable = "local variable"
 
-    def do_nonlocal():
+    def non_local():
         nonlocal variable
         variable = "nonlocal variable"
 
-    def do_global():
+    def glob_al():
         global variable
         variable = "global variable"
 
     variable = "test variable"
-    do_local()
+    local()
     print("After local assignment:", variable)
-    do_nonlocal()
+    non_local()
     print("After nonlocal assignment:", variable)
-    do_global()
+    glob_al()
     print("After global assignment:", variable)
 
 scope_test()
 print("In global scope:", variable)
+
+
+
+
+
+
 class ClassName:
     def __init__(self, value):
         self.data = value  # Set based on the constructor argument
@@ -35,7 +41,7 @@ class D_from_P(ClassName):#inheritence
     def __str__(self):
         return f"D_from_P with data: {self.data}"
 
-    @staticmethod
+   
     def decorator(method):
         def wrapper(self, *args, **kwargs):
             print("Before")
