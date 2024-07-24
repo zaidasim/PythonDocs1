@@ -99,11 +99,11 @@ print(square.area())
 #Polymorphism is a way in which  the compiler automatically calls  functions that are of same name depending on object of the class
 class Bird:
     def fly(self):
-        print("Bird does")
+        print("Bird flies")
 
 class Aeroplane:
     def fly(self):
-        print("Aeroplane does")
+        print("Aeroplane flies")
 
 def flies(can_fly):
     can_fly.fly()
@@ -111,8 +111,9 @@ def flies(can_fly):
 bird = Bird()
 plane = Aeroplane()
 
-flies(bird)  
-flies(plane) 
+flies(bird)  # Outputs: Bird flies
+flies(plane) # Outputs: Aeroplane flies
+ 
 #Encapsulation is a phenomenon in which class's members are made private with (__) at start making it fixed with in the class and only the same class members can access it
 class Car:
     def __init__(self, making, wheels):
