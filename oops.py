@@ -69,6 +69,8 @@ print(P.__str__())  # Use the __str__ method
 P.to_decorate()     # Call the decorated method
 
 
+
+
 #Abstraction is defining a base abstract class  and a virtual function, which defines an informal blue print to follow
 class Shape:
   
