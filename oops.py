@@ -24,14 +24,21 @@ print("In global scope:", variable)
 
 
 
-
+#inheritance is a way that 1 class is derived from the second class so that class 1 can use its protected (_method) and public methods and variables directly
 
 class ClassName:
+
     def __init__(self, value):
         self.data = value  # Set based on the constructor argument
 
     def __str__(self):
         return f"ClassName with data: {self.data}"
+    
+    def _protected_method(self):
+        print("This is a protected method")
+
+    def public_method(self):
+        print("This is a public method")
 
 class D_from_P(ClassName):#inheritence
     def __init__(self, value):
@@ -40,7 +47,9 @@ class D_from_P(ClassName):#inheritence
 
     def __str__(self):
         return f"D_from_P with data: {self.data}"
-
+    def access_methods(self):
+        self._protected_method()  
+        self.public_method()      
    
     def decorator(method):
         def wrapper(self, *args, **kwargs):
@@ -50,7 +59,7 @@ class D_from_P(ClassName):#inheritence
             return result
         return wrapper
 
-    @decorator
+    @decorator# decorator is a nested function that is used to de something before and after the function call
     def to_decorate(self):
         print("Middle")
 
@@ -85,7 +94,7 @@ square = Square(4)
 
 print(circle.area())  
 print(square.area())  
-#Polymorphism is a way in which  the compiler automatically calls derived functions that are of same name
+#Polymorphism is a way in which  the compiler automatically calls  functions that are of same name depending on object of the class
 class Bird:
     def fly(self):
         print("Bird does")
