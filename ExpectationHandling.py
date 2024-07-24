@@ -12,4 +12,4 @@ try:
    print("try")
 finally:
     print('finally')
-#the finally will run before try weather or not it becomes true 
+#the finally will run weather or not try runs 
